@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Components</title>
+    <script src="./node_modules/react/dist/react.js"></script>
+    <script src="./node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="mylib-react-ui.min.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      This is the container.
+    </div>
+
+    <script>
+      var mylib = window['mylib-react-ui'];
+      var Button = React.createElement(mylib.Button, {}, 'click');
+      var BoxIcon = React.createElement(mylib.Icon, { name: "box" }, '');
+      var FirstTitle = React.createElement('h1', {}, 'First Title');
+      var SecondTitle = React.createElement('h2', {}, 'First Title');
+      var Link = React.createElement('a', { href: '' }, 'This is a link');
+
+      var App = React.createElement('div', {}, [
+        FirstTitle,
+        SecondTitle,
+        Link,
+        Button,
+        BoxIcon]);
+
+      var ThemedApp = React.createElement(mylib.default, {}, App)
+
+      ReactDOM.render(ThemedApp, document.getElementById('content'));
+    </script>
+  </body>
+</html>

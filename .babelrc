@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "es2015",
+    "es2016",
+    ["env", {"targets": { "node": "current" }}],
+    "stage-1",
+    "react"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ]
+}

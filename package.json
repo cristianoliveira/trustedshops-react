@@ -1,0 +1,91 @@
+{
+  "name": "mylib-react-ui",
+  "description": "mylib react components using style guide",
+  "version": "1.0.2",
+  "private": true,
+  "homepage": "https://styleguide.mylib.com",
+  "main": "mylib-react-ui.min.js",
+  "author": {
+    "name": "mylib",
+    "url": "https://www.mylib.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cristianoliveira/react-lib-boilerplate.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.4.2",
+    "react-collapsible": "^1.4.0",
+    "react-dom": "^15.4.2",
+    "react-modal": "^2.2.1",
+    "react-responsive-accordion": "^1.0.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack -p",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-react-app": "^1.0.5",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.8.0",
+    "eslint-plugin-flowtype": "2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.1.0",
+    "file-loader": "^0.11.2",
+    "jest": "20.0.4",
+    "loaders": "^1.1.2",
+    "postcss": "^6.0.4",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-data-packer": "^1.2.3",
+    "postcss-flexbugs-fixes": "^3.0.0",
+    "postcss-import": "^10.0.0",
+    "postcss-inherit": "^4.0.3",
+    "postcss-load-config": "1.2.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-mixins": "^6.0.1",
+    "postcss-nested": "^2.0.2",
+    "postcss-reporter": "^4.0.0",
+    "react-styleguidist": "^5.0.0",
+    "style-loader": "^0.18.2",
+    "stylefmt": "^6.0.0",
+    "stylefmt-loader": "^1.2.3",
+    "stylelint-webpack-plugin": "^0.8.0",
+    "svg-sprite-loader": "^3.0.5",
+    "svgo-loader": "^1.2.1",
+    "webpack": "^3.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/specs/mocks/scssLoader.js",
+      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/specs/mocks/imageLoader.js"
+    }
+  }
+}
