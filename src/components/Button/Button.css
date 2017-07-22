@@ -1,0 +1,203 @@
+@import 'theme.css';
+
+:root {
+  --font-bold: {
+    font-family: var(--font-family);
+    font-weight: 700;
+  }
+}
+
+@custom-selector :--children .mrui-button__children;
+
+.mrui {
+  &-button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    vertical-align: middle;
+    display: inline-block;
+
+    @mixin font-bold;
+
+    &__children {
+      border: 1px solid transparent;
+      border-radius: var(--base-border-radius);
+      font-size: var(--font-buttons-mobile);
+      line-height: 1.718;
+      min-width: 140px;
+      padding: 4px 16px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transform: translateY(0);
+      transition: 0.1s transform ease-out;
+      will-change: transform;
+      display: block;
+      min-height: 32px;
+
+      @media (--tablet-viewport) {
+        font-size: var(--font-buttons-base);
+      }
+    }
+
+    &:hover :--children {
+      box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
+    }
+
+    &:active :--children {
+      transform: translateY(0);
+    }
+
+    &--primary {
+      & :--children {
+        background-color: var(--bg-primary-color);
+        color: var(--font-button-primary-color);
+        fill: var(--font-button-primary-color);
+      }
+
+      &:hover :--children {
+        background-color: color(var(--bg-primary-color) tint(40%));
+      }
+
+      &:active :--children {
+        background-color: color(var(--bg-primary-color) tint(80%));
+      }
+    }
+
+    &--secondary {
+      & :--children {
+        border: 1px solid var(--bg-secondary-color);
+        background-color: transparent;
+        color: var(--bg-secondary-color);
+        fill: var(--bg-secondary-color);
+      }
+
+      &:hover :--children {
+        background-color: var(--bg-secondary-color);
+        color: var(--font-button-primary-color);
+        fill: var(--font-button-primary-color);
+      }
+
+      &:active :--children {
+        background-color: color(var(--bg-secondary-color) tint(60%));
+        border-color: transparent;
+        color: var(--font-button-primary-color);
+        fill: var(--font-button-primary-color);
+      }
+    }
+
+    &--revert {
+      & :--children {
+        border: 1px solid var(--font-button-primary-color);
+        background-color: transparent;
+        color: var(--font-button-primary-color);
+        fill: var(--font-button-primary-color);
+      }
+    }
+
+    &--text {
+      & :--children {
+        background-color: transparent;
+        color: var(--bg-primary-color);
+        fill: var(--bg-primary-color);
+        min-width: 0;
+        padding: 0;
+      }
+
+      &:hover :--children {
+        box-shadow: none;
+        text-decoration: underline;
+      }
+    }
+
+    &--icon {
+      & :--children {
+        min-width: 0;
+        padding: 0;
+      }
+
+      &:hover :--children {
+        box-shadow: none;
+      }
+    }
+
+    &--small {
+      & :--children {
+        padding: 2px 16px;
+        min-width: 0;
+        text-transform: none;
+      }
+    }
+
+    &--large {
+      & :--children {
+        padding: 7px 16px;
+        text-transform: uppercase;
+      }
+    }
+
+    &--rounded {
+      & :--children {
+        border-radius: 32px;
+        min-width: auto;
+      }
+    }
+
+    &--icon-right {
+      & :--children {
+        padding-right: 48px;
+      }
+
+      .mrui-icon {
+        margin: 0;
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        right: -1px;
+        background: rgba(255, 255, 255, 0.1);
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 var(--base-border-radius) var(--base-border-radius) 0;
+      }
+    }
+
+    &--icon-left {
+      & :--children {
+        padding-left: 6px;
+      }
+
+      .mrui-icon {
+        margin: 0 2px 0 0;
+      }
+    }
+
+    &--ghost {
+      & :--children {
+        border: 1px solid var(--bg-primary-color);
+        background-color: transparent;
+        color: var(--bg-primary-color);
+        fill: var(--bg-primary-color);
+      }
+
+      &:hover {
+        :--children {
+          background-color: var(--bg-primary-color);
+          color: var(--font-button-primary-color);
+          fill: var(--font-button-primary-color);
+        }
+      }
+
+      &:active :--children {
+        background-color: color(var(--bg-primary-color) lightness(80%));
+        border-color: color(var(--bg-primary-color) lightness(80%));
+        color: var(--font-button-primary-color);
+        fill: var(--font-button-primary-color);
+      }
+    }
+  }
+}

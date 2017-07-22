@@ -1,0 +1,71 @@
+:root {
+  /**
+    * Colors
+  */
+  --orange: #ff5722;
+  --black: #1c1c1c;
+  --blue: #005783;
+  --dark-blue: #11394e;
+  --red: #d32f2f;
+  --gray: #f5f5f5;
+  --shadow: #999;
+  --white: #fff;
+
+  /* Font colors */
+  --font-highlighted-color: var(--blue);
+  --font-button-primary-color: var(--white);
+  --font-dark-blue-color: var(--dark-blue);
+  --font-white-color: var(--white);
+
+  /* Background color variants */
+  --bg-primary-color: var(--orange);
+  --bg-secondary-color: var(--blue);
+  --bg-dark: var(--black);
+  --bg-bright: var(--white);
+  --border-gray-color: var(--gray);
+  --border-dark-color: var(--black);
+
+  /* SVG fills */
+  --svg-primary-color: var(--dark-blue);
+  --svg-secondary-color: var(--white);
+
+  /**
+    * Typography
+    * Font, line-height, and color for text, headings, and more
+  */
+  --font-family: 'Open Sans', sans-serif;
+  --font-size-base: 15px;
+  --font-buttons-base: 14px;
+  --font-size-sm: 12px;
+  --font-size-h1: 24px;
+  --font-size-h2: 21px;
+  --font-size-h3: 18px;
+  --font-size-h4: 16px;
+  --font-size-h5: 16px;
+  --font-size-h1-mobile: 21px;
+  --font-size-h2-mobile: 19px;
+  --font-size-h3-mobile: 17px;
+  --font-size-h4-mobile: 15px;
+  --font-size-h5-mobile: 15px;
+  --font-buttons-mobile: 16px;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-normal: 500;
+  --font-line-height-base: 1.53;
+
+  /**
+    * Spaces
+    * Main spaces between elements.
+  */
+  --base-margin: 16px;
+  --base-border-radius: 3px;
+}
+
+/**
+  * Media queries breakpoints
+  * Define the breakpoints at which your layout will change, adapting to different screen sizes.
+*/
+@custom-media --mobile-portrait-viewport (width >= 576px);
+@custom-media --tablet-viewport (width >= 768px);
+@custom-media --desktop-viewport (width >= 992px);
+@custom-media --wide-desktop-viewport (width >= 1280px);
