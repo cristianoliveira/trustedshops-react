@@ -1,0 +1,26 @@
+.trustedshops {
+  font-family: Arial "Helvetica Neue" Helvetica sans-serif;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  width: 82px;
+
+  &-badge {
+    margin: 6px auto;
+    width: 60px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &-review {
+    width: 77px;
+    margin: auto;
+    border-top: 1px solid #ccc;
+
+    &-text {
+      text-align: center;
+    }
+  }
+}

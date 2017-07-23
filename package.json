@@ -1,17 +1,16 @@
 {
-  "name": "mylib-react-ui",
-  "description": "mylib react components using style guide",
+  "name": "trustedshops",
+  "description": "trustedshopsde",
   "version": "1.0.2",
   "private": true,
-  "homepage": "https://styleguide.mylib.com",
-  "main": "mylib-react-ui.min.js",
+  "main": "trustedshops.min.js",
   "author": {
-    "name": "mylib",
-    "url": "https://www.mylib.com"
+    "name": "Cristian Oliveira da Rosa",
+    "url": "https://github.com/cristianoliveira/trusted-shops-react"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:cristianoliveira/react-lib-boilerplate.git"
+    "url": "git@github.com:cristianoliveira/trusted-shops-react.git"
   },
   "license": "MIT",
   "engines": {
@@ -20,13 +19,10 @@
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.4.2",
-    "react-collapsible": "^1.4.0",
-    "react-dom": "^15.4.2",
-    "react-modal": "^2.2.1",
-    "react-responsive-accordion": "^1.0.0"
+    "react-dom": "^15.4.2"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot",
     "build": "webpack -p",
     "test": "jest",
     "test-watch": "jest --watch",
@@ -42,6 +38,7 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-react-app": "^1.0.5",
@@ -49,6 +46,7 @@
     "eslint-loader": "^1.8.0",
     "eslint-plugin-flowtype": "2.34.1",
     "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-react": "^7.1.0",
     "file-loader": "^0.11.2",
@@ -62,16 +60,16 @@
     "postcss-inherit": "^4.0.3",
     "postcss-load-config": "1.2.0",
     "postcss-loader": "^2.0.6",
-    "postcss-mixins": "^6.0.1",
     "postcss-nested": "^2.0.2",
     "postcss-reporter": "^4.0.0",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.6.1",
     "react-styleguidist": "^5.0.0",
+    "react-svg-loader": "^1.1.1",
     "style-loader": "^0.18.2",
     "stylefmt": "^6.0.0",
     "stylefmt-loader": "^1.2.3",
     "stylelint-webpack-plugin": "^0.8.0",
-    "svg-sprite-loader": "^3.0.5",
-    "svgo-loader": "^1.2.1",
     "webpack": "^3.0.0"
   },
   "jest": {
@@ -84,8 +82,8 @@
       "src"
     ],
     "moduleNameMapper": {
-      ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/specs/mocks/scssLoader.js",
-      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/specs/mocks/imageLoader.js"
+      ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/loaderMock.js",
+      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/loaderMock.js"
     }
   }
 }
