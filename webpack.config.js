@@ -40,11 +40,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe|jpg|woff|woff2|eot|ttf)(\?.*$|$)/,
-        loader: 'file-loader',
-        query: {
-          name: 'public/fonts/[name].[hash:8].[ext]'
-        }
+        test: /\.(png)(\?.*$|$)/,
+        loader: 'url-loader'
       },
       {
         test: /\.css$/,
