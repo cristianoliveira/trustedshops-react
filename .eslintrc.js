@@ -6,7 +6,8 @@ module.exports = {
   "env": {
     "browser": true,
     "es6": true,
-    "jquery": true
+    "jquery": true,
+    "jest": true
   },
   "extends": "airbnb",
   "parserOptions": {
@@ -36,6 +37,7 @@ module.exports = {
       "error",
       "always"
     ],
+    "object-shorthand": [1, "always"],
     "react/jsx-filename-extension": [
       1,
       {

@@ -4,8 +4,8 @@ const SOURCE_DIR = path.resolve(__dirname, 'src');
 module.exports = {
   entry: SOURCE_DIR + '/index.js',
   output: {
-    filename: 'mylib-react-ui.min.js',
-    library: 'mylib-react-ui',
+    filename: 'trustedshops.min.js',
+    library: 'trustedshops',
     libraryTarget: 'umd'
   },
   module: {
@@ -25,12 +25,22 @@ module.exports = {
         test: /\.svg$/,
         exclude: /node_modules/,
         use: [
-          'svg-sprite-loader',
-          'svgo-loader'
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              svgo: {
+                plugins: [{removeTitle: false}],
+                floatPrecision: 2
+              }
+            }
+          }
         ]
       },
       {
-        test: /\.(jpe|jpg|woff|woff2|eot|ttf)(\?.*$|$)/,
+        test: /\.(png|jpe|jpg|woff|woff2|eot|ttf)(\?.*$|$)/,
         loader: 'file-loader',
         query: {
           name: 'public/fonts/[name].[hash:8].[ext]'
@@ -66,7 +76,6 @@ module.exports = {
                   ]
                 }),
                 require('postcss-flexbugs-fixes'),
-                require('postcss-mixins'),
                 require('postcss-inherit'),
                 require('postcss-nested'),
                 require('postcss-reporter')
