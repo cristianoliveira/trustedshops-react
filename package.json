@@ -1,8 +1,7 @@
 {
   "name": "trustedshops",
-  "description": "trustedshopsde",
-  "version": "1.0.2",
-  "private": true,
+  "description": "The trusted shops self-contained React component (Plug and play)",
+  "version": "1.0.3",
   "main": "trustedshops.min.js",
   "author": {
     "name": "Cristian Oliveira da Rosa",
